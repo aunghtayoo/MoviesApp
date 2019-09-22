@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/trending_gradient_shape"
+    style="@style/AppTheme.NowShowing">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_close">
+
+        <ImageView
+            android:layout_width="@dimen/ic_regular_2x"
+            android:layout_height="@dimen/ic_regular_2x"
+            android:src="@drawable/ic_close_black_24dp"
+            android:layout_margin="@dimen/margin_medium_2"
+            android:layout_alignParentRight="true"
+            android:id="@+id/ic_close"/>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_close">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_movie_name"
+                android:gravity="center_vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lbl_movie_name"
+                    style="@style/AppTheme.MovieName"
+                    android:text="black Panther"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lbl_movie_name"
+                    style="@style/AppTheme.MovieInfo"
+                    android:text=" Fantasy | Science fiction  -  2h 15m "/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_movie_info"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_below="@+id/layout_movie_name"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/lbl_001"
+                            style="@style/AppTheme.MovieInfo.Digit"
+                            android:text="7.5"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/lbl_001"
+                            style="@style/AppTheme.MovieInfo"
+                            android:text="IMDB"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/lbl_002"
+                            style="@style/AppTheme.MovieInfo.Digit"
+                            android:text="97%"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/lbl_002"
+                            style="@style/AppTheme.MovieInfo"
+                            android:text="Rotten Tomato"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/lbl_003"
+                            style="@style/AppTheme.MovieInfo.Digit"
+                            android:text="92%"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/lbl_003"
+                            style="@style/AppTheme.MovieInfo"
+                            android:text="Metacritic"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <VideoView
+                android:layout_width="@dimen/width_video_view"
+                android:layout_height="@dimen/height_video_view"
+                android:id="@+id/iv_detail"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_below="@+id/layout_movie_info"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_detail"
+                android:gravity="center_horizontal"
+                style="@style/AppTheme.MovieInfo"
+                android:lines="3"
+                android:ellipsize="end"
+                android:layout_margin="@dimen/margin_medium_3"
+                android:id="@+id/lbl_review"
+                android:text="A biologic signed up for a dangerous. Secret expedition into a mysterious zone where the laws of nature don't apply. Based on Jeff. A biologic signed up for a dangerous A biologic signed up for a dangerous A biologic signed up for a dangerous A biologic signed up for a dangerous"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/lbl_review"
+                android:id="@+id/layout_readmore"
+                android:gravity="center_horizontal|top">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/text_regular"
+                    android:text="Read more"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_keyboard_arrow_down_black_24dp"/>
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="@dimen/width_primary_button"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_below="@+id/layout_readmore"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/btn_buy_ticket_detail"
+                style="@style/AppTheme.Button"
+                android:text="Buy Tickets"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_buy_ticket_detail"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginLeft="@dimen/margin_medium_2">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lbl_title_cast"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/text_regular"
+                    android:text="Cast"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rv_cast"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_below="@+id/lbl_title_cast"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rv_cast"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:id="@+id/lbl_title_screenshot"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/text_regular"
+                    android:text="Screenshots"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rv_screenshot"
+                    android:layout_marginBottom="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_below="@+id/lbl_title_screenshot"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
